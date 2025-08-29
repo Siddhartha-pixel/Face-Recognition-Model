@@ -2,20 +2,21 @@
 This project is a simple face recognition application built using Python, OpenCV, and the `face_recognition` library. It can detect and identify faces in a static image or a live webcam feed by comparing them against a set of known faces.
 
 
-# Face Recognition Application
+# Face Detection with OpenCV
 
-This project is a simple face recognition application built using Python, OpenCV, and the `face_recognition` library. It can detect and identify faces in a static image or a live webcam feed by comparing them against a set of known faces.
+This project demonstrates a simple face detection application using Python and the OpenCV library. It utilizes a pre-trained Haar Cascade classifier (`haarcascade_frontalface_default.xml`) to identify human faces in an image.
 
 ## Features
 
--   **Face Detection**: Finds the locations of faces in an image.
--   **Face Recognition**: Identifies known individuals.
--   **Real-time Recognition**: Works with a webcam feed.
--   **Bounding Boxes**: Draws a box and a label with the recognized name around each face.
+-   Loads an image from a specified file path.
+-   Resizes the image for consistent processing.
+-   Converts the image to grayscale, as required by the Haar Cascade classifier.
+-   Detects faces and returns their coordinates.
+-   (Note: The provided code snippet currently only detects the faces. To display bounding boxes, you would need to add a few more lines of code.)
 
 ## Prerequisites
 
-Before running the application, make sure you have Python installed. The project uses several libraries that you can install with `pip`.
+To run this project, you need to have Python and the necessary libraries installed.
 
 ## Installation
 
@@ -32,18 +33,22 @@ Before running the application, make sure you have Python installed. The project
 
 ## Usage
 
-1.  **Add Known Faces**: Place images of the people you want to recognize in the project directory. The code is currently set up to use `person1.jpg`, but you can easily add more by following the pattern in the notebook.
+This project is a Jupyter Notebook. To run the code, you will need a Jupyter environment (like JupyterLab or VS Code with the Jupyter extension).
 
-2.  **Run the Notebook**: Open the `face_recognition_app.ipynb` file in a Jupyter environment (like JupyterLab or VS Code with the Jupyter extension) and run all the cells.
-
-    -   The application will first load the known face(s) and display them.
-    -   It will then capture a frame from your webcam (or load `test_image.jpg` if you uncomment that line).
-    -   Finally, it will display the frame with the recognized faces and their names.
+1.  **Open the Notebook**: Launch your Jupyter environment and open `facerecognition.ipynb`.
+2.  **Provide the Data**: Make sure the required image (`people1.jpg`) and the classifier file (`haarcascade_frontalface_default.xml`) are in the correct path as specified in the notebook, or update the paths in the code to match your file locations.
+3.  **Run the Cells**: Execute the cells in the notebook sequentially to see the code in action. The notebook will:
+    -   Load and display the original image.
+    -   Resize the image.
+    -   Convert it to grayscale.
+    -   Load the face detector.
+    -   Attempt to detect faces, which will output the coordinates of any detected faces.
 
 ## Project Structure
 
--   `face_recognition_app.ipynb`: The main Jupyter Notebook containing all the code.
--   `person1.jpg`: An example image of a known person.
+-   `facerecognition.ipynb`: The main Jupyter Notebook containing the face detection code.
+-   `people1.jpg`: The input image file used for face detection.
+-   `haarcascade_frontalface_default.xml`: The pre-trained Haar Cascade classifier file from OpenCV.
 -   `requirements.txt`: A list of all the Python dependencies.
 -   `README.md`: This file.
 -   `.gitignore`: A file to ignore unnecessary files and directories.
