@@ -21,7 +21,7 @@ Before running the application, make sure you have Python installed. The project
 
 1.  **Clone the repository**:
     ```bash
-    git clone [https://github.com/YourUsername/YourRepoName.git](https://github.com/YourUsername/YourRepoName.git)
+    git clone [https://github.com/Siddhartha-pixel/Face-Recognition-Model](https://github.com/Siddhartha-pixel/Face-Recognition-Model)
     cd YourRepoName
     ```
 
