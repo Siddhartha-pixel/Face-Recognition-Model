@@ -1,5 +1,6 @@
 opencv-python
-face_recognition
 numpy
+pandas
+seaborn
 matplotlib
-jupyter
+ipykernel
